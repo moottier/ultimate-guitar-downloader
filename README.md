@@ -2,9 +2,9 @@
 Download tabs from ultimate-guitar.com
 
 # Usage
-python main.py <<<INPUT FILE>>>
+python main.py **INPUT FILE**
   
-<<<INPUT FILE>>> is a text file with a single ultimate-guitar.com tab url on each line. See in.txt for an example.
+**INPUT FILE** is a text file with a single ultimate-guitar.com tab url on each line. See in.txt for an example.
 The downloader can handle Power Tab and Guitar Pro tab style tabs.
   
 # Output
