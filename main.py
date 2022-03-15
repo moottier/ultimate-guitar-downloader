@@ -52,7 +52,7 @@ def download(url: str) -> None:
     """
     resp = _download_bytes(url)
     fn = _get_filename_from_headers(resp.headers['content-disposition'])
-    with open(fn, 'wb+') as f:
+    with open(f'output/{fn}', 'wb+') as f:
         f.write(resp.content)
 
 
