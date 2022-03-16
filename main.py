@@ -3,6 +3,7 @@ from typing import List, Union
 from pathlib import Path
 import httpx
 import re
+import os
 
 def get_download_request_headers(url: str) -> dict:
     """
@@ -84,6 +85,9 @@ def get_parser() -> ArgumentParser:
 if __name__ == '__main__':
     args = get_parser().parse_args()
 
+    if not os.path.exists('output'):
+        os.makedirs('output')
+    
     file = args.input[0]    # argparse returns single element list for input
     urls = get_urls(file)
     success = []
